@@ -1,11 +1,19 @@
-import cv2
 import os
 import sys
 import time
 import threading
-import numpy as np
 from fastapi import APIRouter
 from fastapi.responses import StreamingResponse, HTMLResponse
+
+try:
+    import cv2
+    import numpy as np
+    HAS_CV2 = True
+except Exception as _cv_err:
+    cv2 = None
+    np = None
+    HAS_CV2 = False
+    print(f"[Vision Module Note] Running in cloud mode without OpenCV: {_cv_err}")
 
 # Add project root dynamically so ai.* imports work from backend context
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
@@ -139,7 +147,7 @@ class _CameraEngine:
             self._last_call_result = {"status": "FAILED", "message": str(e)}
 
     def _loop(self):
-        if not HAS_AI_MODULES or CameraStream is None:
+        if not HAS_CV2 or not HAS_AI_MODULES or CameraStream is None:
             print("[CameraEngine] Cloud/Headless deployment detected. Local AI camera hardware loop disabled.")
             while self._running:
                 time.sleep(1.0)
