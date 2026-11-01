@@ -1,0 +1,396 @@
+/* About Section Layout */
+.about-section {
+  position: relative;
+  padding: 100px 24px;
+  background-color: var(--bg-primary, #0a0e1a);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Left Column: Content Styling */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.about-badge-wrapper {
+  margin-bottom: 20px;
+}
+
+.about-tag-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-cyan, #06b6d4);
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.05);
+}
+
+.about-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--text-primary, #f3f4f6);
+  margin: 0 0 20px;
+}
+
+.about-paragraph {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary, #9ca3af);
+  margin: 0 0 32px;
+}
+
+/* Project Vision Box */
+.about-vision-block {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 36px;
+  width: 100%;
+}
+
+.vision-header {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-cyan, #06b6d4);
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vision-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary, #f3f4f6);
+  margin: 0;
+}
+
+/* Core Pillars List */
+.about-pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.pillar-item {
+  background: rgba(18, 24, 41, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.pillar-item:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(18, 24, 41, 0.5);
+  transform: translateY(-2px);
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.pillar-icon-container {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 182, 212, 0.05);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  color: var(--color-cyan, #06b6d4);
+}
+
+.pillar-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary, #f3f4f6);
+  margin: 0;
+}
+
+.pillar-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-secondary, #9ca3af);
+  margin: 0;
+  text-align: left;
+}
+
+/* Right Column: System Flow Diagram Mockup */
+.about-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.architecture-mockup {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(18, 24, 41, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 
+              0 0 40px rgba(6, 182, 212, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.architecture-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.mockup-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-cyan, #06b6d4);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 4px var(--color-cyan, #06b6d4));
+}
+
+.mockup-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  color: var(--text-secondary, #9ca3af);
+}
+
+/* Pipeline Container & SVGs */
+.pipeline-container {
+  position: relative;
+  width: 100%;
+}
+
+.pipeline-line {
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  /* Centered exactly under the 36px node-icon-wrapper inside 16px padding of card */
+  left: 34px; 
+  width: 2px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.line-bg {
+  stroke: rgba(255, 255, 255, 0.03);
+  stroke-width: 2px;
+}
+
+.line-flow {
+  stroke: var(--color-cyan, #06b6d4);
+  stroke-width: 2px;
+  stroke-dasharray: 10 15;
+  animation: flow-dash-about 4s linear infinite;
+}
+
+@keyframes flow-dash-about {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+.pipeline-nodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Pipeline Glass Node Card */
+.pipeline-node-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(10, 14, 26, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+}
+
+.pipeline-node-card:hover {
+  transform: translateX(4px);
+  background: rgba(18, 24, 41, 0.85);
+}
+
+.node-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 14, 26, 1); /* Solid mask covering connection line */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.node-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.node-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary, #f3f4f6);
+}
+
+.node-sublabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  color: var(--text-secondary, #9ca3af);
+  margin-top: 1px;
+}
+
+/* Theme Accents for Node Cards */
+.pipeline-node-card.cyan-theme .node-icon-wrapper {
+  color: var(--color-cyan, #06b6d4);
+  border-color: rgba(6, 182, 212, 0.25);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.05);
+}
+
+.pipeline-node-card.cyan-theme:hover {
+  border-color: rgba(6, 182, 212, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 
+              0 0 15px rgba(6, 182, 212, 0.08);
+}
+
+.pipeline-node-card.violet-theme .node-icon-wrapper {
+  color: var(--color-violet, #8b5cf6);
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.05);
+}
+
+.pipeline-node-card.violet-theme:hover {
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 
+              0 0 15px rgba(139, 92, 246, 0.08);
+}
+
+.pipeline-node-card.emerald-theme .node-icon-wrapper {
+  color: var(--color-emerald, #10b981);
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.05);
+}
+
+.pipeline-node-card.emerald-theme:hover {
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 
+              0 0 15px rgba(16, 185, 129, 0.08);
+}
+
+/* Accessibility Focus States */
+.pillar-item:focus-visible,
+.pipeline-node-card:focus-visible {
+  outline: 2px solid var(--color-cyan, #06b6d4);
+  outline-offset: 4px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .about-content {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .about-paragraph,
+  .about-vision-block {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 20px;
+  }
+  
+  .about-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 28px;
+  }
+  
+  .pipeline-node-card {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .node-label {
+    font-size: 13px;
+  }
+  
+  .node-sublabel {
+    font-size: 11px;
+  }
+}
+
+/* Support users that prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pillar-item,
+  .pipeline-node-card {
+    transition: none !important;
+  }
+  
+  .pillar-item:hover,
+  .pipeline-node-card:hover {
+    transform: none !important;
+  }
+  
+  .line-flow {
+    animation: none !important;
+    stroke-dasharray: 0 !important;
+  }
+}
